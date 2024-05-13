@@ -16,10 +16,23 @@ const stringTrimmer = function (stringa1, stringa2) {
 };
 
 stringTrimmer(str1, str2);
+
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
 
+console.log("ESERCIZIO 2");
+
+const tenRandomNumbers = function () {
+  const randomNumbers = [];
+  for (let i = 0; i < 10; i++) {
+    const randomNumber = Math.floor(Math.random() * 101);
+    randomNumbers.push(randomNumber);
+  }
+  return randomNumbers;
+};
+
+console.log(tenRandomNumbers());
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
