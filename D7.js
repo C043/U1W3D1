@@ -82,6 +82,19 @@ console.log(sumToArray(numArray, 1));
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
+console.log("ESERCIZIO 7");
+
+const strArray = ["EPICODE", "IS", "GREAT!"];
+
+const countStrings = function (array) {
+  const countedStrings = array.map((string) => {
+    return string.length;
+  });
+  return countedStrings;
+};
+
+console.log(countStrings(strArray));
+
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
