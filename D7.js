@@ -64,6 +64,18 @@ console.log(somma(numArray));
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+console.log("ESERCIZIO 5");
+
+const sommaReduce = function (array) {
+  const sum = array.reduce(
+    (accumulator, currentElement) => accumulator + currentElement,
+    0 //Questo è il fallback per il primo ciclo
+  );
+  return sum;
+};
+
+console.log(sommaReduce(numArray));
+
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
@@ -242,6 +254,7 @@ const oldestMovie = function (array) {
 };
 
 console.log(oldestMovie);
+
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
