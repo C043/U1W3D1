@@ -114,14 +114,12 @@ console.log(countStrings(strArray));
 console.log("ESERCIZIO 8");
 
 const allOdds = function () {
-  let count = 0;
   const from1To99 = [];
   const odds = [];
-  for (let i = 0; i < 99; i++) {
-    count++;
-    from1To99.push(count);
+  for (let i = 1; i < 100; i++) {
+    from1To99.push(i);
   }
-  from1To99.filter((number) => number % 2 > 0).forEach((n) => odds.push(n));
+  from1To99.filter((number) => number % 2 !== 0).forEach((n) => odds.push(n));
   return odds;
 };
 
