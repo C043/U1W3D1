@@ -40,7 +40,7 @@ console.log(tenRandomNumbers());
 
 console.log("ESERCIZIO 3");
 
-const numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const evens = numArray.filter((number) => number % 2 === 0);
 
@@ -67,6 +67,15 @@ console.log(somma(numArray));
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+
+console.log("ESERCIZIO 6");
+
+const sumToArray = function (array, n) {
+  const summedArray = array.map((number) => number + n);
+  return summedArray;
+};
+
+console.log(sumToArray(numArray, 1));
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
