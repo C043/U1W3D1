@@ -273,6 +273,17 @@ console.log(countElements(movies));
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 
+console.log("ESERCIZIO 11");
+
+const getTitles = function (array) {
+  const titles = array.map((movie) => {
+    return movie.Title;
+  });
+  return titles;
+};
+
+console.log(getTitles(movies));
+
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
