@@ -99,6 +99,22 @@ console.log(countStrings(strArray));
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 
+console.log("ESERCIZIO 8");
+
+const allOdds = function () {
+  let count = 0;
+  const from1To99 = [];
+  const odds = [];
+  for (let i = 0; i < 99; i++) {
+    count++;
+    from1To99.push(count);
+  }
+  from1To99.filter((number) => number % 2 > 0).forEach((n) => odds.push(n));
+  return odds;
+};
+
+console.log(allOdds());
+
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
