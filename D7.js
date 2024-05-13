@@ -250,10 +250,23 @@ const movies = [
 console.log("ESERCIZIO 9");
 
 const oldestMovie = function (array) {
-  array.forEach(function (movie) {});
+  const newMovies = [...array];
+  const oldestMovies = [];
+  let year = 3000;
+  newMovies.forEach(function (movie) {
+    movie.Year = Number(movie.Year);
+  });
+  newMovies.forEach(function (movie) {
+    if (movie.Year < year) {
+      year = movie.Year;
+      oldestMovies.pop();
+      oldestMovies.push(movie);
+    }
+  });
+  return oldestMovie[0];
 };
 
-console.log(oldestMovie);
+console.log(oldestMovie(movies));
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
@@ -288,9 +301,40 @@ console.log(getTitles(movies));
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
+/* console.log("ESERCIZIO 12");
+
+const getRecent = function (array) {
+  const newMovies = [...movies];
+  const recent = newMovies
+    .forEach(function (movie) {
+      movie.Year = Number(movie.Year);
+    })
+    .filter(function (movie) {
+      return movie.Year >= 2000;
+    });
+  return recent;
+};
+
+console.log(getRecent(movies));
+ */
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+
+console.log("ESERCIZIO 13");
+
+const yearSum = function (array) {
+  const years = array.map((movie) => {
+    return movie.Year;
+  });
+  const sumOfYears = years.reduce(
+    (accumulator, initialValue) => accumulator + initialValue,
+    0
+  );
+  return sumOfYears;
+};
+
+console.log(yearSum(movies));
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
