@@ -263,7 +263,7 @@ const oldestMovie = function (array) {
       oldestMovies.push(movie);
     }
   });
-  return oldestMovie[0];
+  return oldestMovies[0];
 };
 
 console.log(oldestMovie(movies));
