@@ -301,22 +301,20 @@ console.log(getTitles(movies));
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
-/* console.log("ESERCIZIO 12");
+console.log("ESERCIZIO 12");
 
 const getRecent = function (array) {
-  const newMovies = [...movies];
-  const recent = newMovies
-    .forEach(function (movie) {
-      movie.Year = Number(movie.Year);
-    })
-    .filter(function (movie) {
-      return movie.Year >= 2000;
-    });
-  return recent;
+  const newMovies = [...array];
+  // Converto i valori di anno in numeri
+  newMovies.forEach(function (movie) {
+    movie.Year = Number(movie.Year);
+  });
+  const recentMovies = newMovies.filter((movie) => movie.Year > 2000);
+  return recentMovies;
 };
 
 console.log(getRecent(movies));
- */
+
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
