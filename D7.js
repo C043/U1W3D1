@@ -42,12 +42,9 @@ console.log("ESERCIZIO 3");
 
 const numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const getEven = function (array) {
-  const evens = array.filter((number) => number % 2 === 0);
-  return evens;
-};
+const evens = numArray.filter((number) => number % 2 === 0);
 
-console.log(getEven(numArray));
+console.log(evens);
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
