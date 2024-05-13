@@ -53,6 +53,16 @@ console.log(getEven(numArray));
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+console.log("ESERCIZIO 4");
+
+const somma = function (array) {
+  let actualSum = 0;
+  array.forEach((number) => (actualSum += number));
+  return actualSum;
+};
+
+console.log(somma(numArray));
+
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
