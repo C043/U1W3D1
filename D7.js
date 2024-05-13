@@ -113,7 +113,7 @@ console.log(countStrings(strArray));
 
 console.log("ESERCIZIO 8");
 
-const allOdds = function () {
+const getAllOdds = function () {
   const from1To99 = [];
   const odds = [];
   for (let i = 1; i < 100; i++) {
@@ -123,7 +123,7 @@ const allOdds = function () {
   return odds;
 };
 
-console.log(allOdds());
+console.log(getAllOdds());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
