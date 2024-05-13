@@ -352,3 +352,19 @@ console.log(getMovie(movies, "tt0057261"));
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
+console.log("ESERCIZIO 15");
+
+const findIndexMovie = function (array, year) {
+  if (typeof year === "number") {
+    const strYear = year.toString();
+    const index = array.findIndex((movie) => movie.Year == strYear);
+    return index;
+  } else if (typeof year === "string") {
+    const index = array.findIndex((movie) => movie.Year == year);
+    return index;
+  }
+};
+
+console.log(findIndexMovie(movies, 1963));
+console.log(findIndexMovie(movies, "2019"));
