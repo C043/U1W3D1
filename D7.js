@@ -308,9 +308,8 @@ console.log("ESERCIZIO 13");
 
 const yearSum = function (array) {
   const years = array.map((movie) => {
-    return movie.Year;
+    return parseInt(movie.Year);
   });
-  console.log(years);
   const sumOfYears = years.reduce(
     (accumulator, initialValue) => accumulator + initialValue,
     0
@@ -327,7 +326,7 @@ console.log(yearSum(movies));
 console.log("ESERCIZIO 14");
 
 const getMovie = function (array, id) {
-  const searchedMovie = array.filter((movie) => movie.imdbID === id);
+  const searchedMovie = array.find((movie) => movie.imdbID === id);
   return searchedMovie;
 };
 
@@ -342,10 +341,10 @@ console.log("ESERCIZIO 15");
 const findIndexMovie = function (array, year) {
   if (typeof year === "number") {
     const strYear = year.toString();
-    const index = array.findIndex((movie) => movie.Year == strYear);
+    const index = array.findIndex((movie) => movie.Year === strYear);
     return index;
   } else if (typeof year === "string") {
-    const index = array.findIndex((movie) => movie.Year == year);
+    const index = array.findIndex((movie) => movie.Year === year);
     return index;
   }
 };
