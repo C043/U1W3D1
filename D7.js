@@ -249,20 +249,13 @@ console.log(movies);
 console.log("ESERCIZIO 9");
 
 const oldestMovie = function (array) {
-  const newMovies = [...array];
-  const oldestMovies = [];
-  let year = 3000;
-  /*   newMovies.forEach(function (movie) {
-    movie.Year = Number(movie.Year);
-  });
- */ newMovies.forEach(function (movie) {
-    if (movie.Year < year) {
-      year = movie.Year;
-      oldestMovies.pop();
-      oldestMovies.push(movie);
+  let oldestMovie = array[0];
+  array.forEach(function (movie) {
+    if (parseInt(movie.Year) < oldestMovie.Year) {
+      oldestMovie = movie;
     }
   });
-  return oldestMovies[0];
+  return oldestMovie;
 };
 
 console.log(oldestMovie(movies));
