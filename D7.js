@@ -244,6 +244,7 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+console.log(movies);
 
 console.log("ESERCIZIO 9");
 
@@ -251,10 +252,10 @@ const oldestMovie = function (array) {
   const newMovies = [...array];
   const oldestMovies = [];
   let year = 3000;
-  newMovies.forEach(function (movie) {
+  /*   newMovies.forEach(function (movie) {
     movie.Year = Number(movie.Year);
   });
-  newMovies.forEach(function (movie) {
+ */ newMovies.forEach(function (movie) {
     if (movie.Year < year) {
       year = movie.Year;
       oldestMovies.pop();
@@ -302,12 +303,7 @@ console.log(getTitles(movies));
 console.log("ESERCIZIO 12");
 
 const getRecent = function (array) {
-  const newMovies = [...array];
-  // Converto i valori di anno in numeri
-  newMovies.forEach(function (movie) {
-    movie.Year = Number(movie.Year);
-  });
-  const recentMovies = newMovies.filter((movie) => movie.Year > 2000);
+  const recentMovies = array.filter((movie) => parseInt(movie.Year) > 2000);
   return recentMovies;
 };
 
@@ -323,6 +319,7 @@ const yearSum = function (array) {
   const years = array.map((movie) => {
     return movie.Year;
   });
+  console.log(years);
   const sumOfYears = years.reduce(
     (accumulator, initialValue) => accumulator + initialValue,
     0
