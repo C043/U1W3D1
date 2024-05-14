@@ -274,9 +274,7 @@ console.log(oldestMovie(movies));
 console.log("ESERCIZIO 10");
 
 const countElements = function (array) {
-  let count = 0;
-  array.map(() => count++);
-  return count;
+  return array.length;
 };
 
 console.log(countElements(movies));
